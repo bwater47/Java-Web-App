@@ -1,9 +1,10 @@
 package com.technews.model;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
-import com.sun.istack.NotNull;
 
-import javax.persistence.*;
+import jakarta.persistence.*;
+import jakarta.validation.constraints.NotNull;
+
 import java.io.Serializable;
 import java.util.Date;
 import java.util.List;
@@ -28,7 +29,7 @@ public class Post implements Serializable {
 
     @NotNull
     @Temporal(TemporalType.DATE)
-    @Column(name = "updated_at")
+    @Column(name = "posted_at")
     private Date postedAt = new Date();
 
     @NotNull
